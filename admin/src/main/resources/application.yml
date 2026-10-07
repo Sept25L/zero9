@@ -1,0 +1,46 @@
+# 项目相关配置
+zero9:
+  # 文件上传路径，可根据自行调整
+  profile: C:\Users\Zero9\Desktop\MyProject\oss\
+# spring 配置
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 上传文件最大值
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  # 数据源（数据库连接）的配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # jdbc:mysql:// 表示使用jdbc连接mysql
+    # useUnicode=true 表示使用unicode字符集
+    # characterEncoding=utf8 使用UTF-8避免中文乱码
+    # zeroDateTimeBehavior=convertToNull 把0000-00-00这种日期转变成null
+    # useSSL=true 使用SSL加密（开发环境为false）
+    # serverTimezone=Asia/Shanghai 设置时区为亚洲上海
+    url: jdbc:mysql://localhost:3306/zero9?useUnicode=true&characterEncoding =utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5
+      max-active: 20
+      min-idle: 5
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 2
+      logic-not-delete-value: 0
+server:
+  port: 8081
+  servlet:
+    context-path: /
+# 日志配置
+logging:
+  level:
+    com.zero9: debug
+    org.springframework: info

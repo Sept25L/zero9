@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body, #app {
+  height: 100%;
+}
+
+/* 水平居中 */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 两端对齐 */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wh {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-col { flex-direction: column; }
+
+a {
+  all: unset;
+  cursor: pointer;
+}

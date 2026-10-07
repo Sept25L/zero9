@@ -1,0 +1,22 @@
+package com.zero9.service.impl;
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.zero9.domain.SysUserRole;
+import com.zero9.service.SysUserRoleService;
+import com.zero9.mapper.SysUserRoleMapper;
+import org.springframework.stereotype.Service;
+
+/**
+* @author Zero9
+* @description 针对表【sys_user_role(用户-角色表)】的数据库操作Service实现
+* @createDate 2026-04-16 15:52:55
+*/
+@Service
+public class SysUserRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRole>
+    implements SysUserRoleService{
+
+}
+
+
+
+
